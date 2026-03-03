@@ -13,7 +13,7 @@ from sklearn.metrics import roc_auc_score, classification_report, confusion_matr
 
 df = pd.read_csv("data/cleaned_telco_data.csv")
 
-# Safety: drop leakage columns if present
+
 leak_cols = ["Churn Label", "Churn Score", "Churn Reason"]
 df = df.drop(columns=[c for c in leak_cols if c in df.columns], errors="ignore")
 
