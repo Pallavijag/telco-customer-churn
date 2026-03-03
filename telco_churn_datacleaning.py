@@ -59,10 +59,10 @@ print(df.select_dtypes(include='object').columns)
 
 
 
-df_clean = df.copy()   # ✅ keep cleaned (non-encoded) data for dashboard/risk file
-# ✅ Save cleaned dataset (before encoding)
+df_clean = df.copy()   # keep cleaned (non-encoded) data for dashboard/risk file
+# Save cleaned dataset (before encoding)
 df.to_csv("cleaned_telco_data.csv", index=False)
-print("✅ Saved: cleaned_telco_data.csv", df.shape)
+print("Saved: cleaned_telco_data.csv", df.shape)
 
 
 
@@ -157,7 +157,7 @@ print('ROC-AUC:', roc_auc_score(y_test, y_prob))
 
 import numpy as np
 
-# ✅ Risk dashboard dataset (business-friendly, non-encoded)
+# Risk dashboard dataset (business-friendly, non-encoded)
 # X_test is a DataFrame, so it has the original row indices
 risk_dashboard = df_clean.loc[X_test.index].copy()
 
@@ -172,7 +172,7 @@ risk_dashboard["Risk_Segment"] = np.where(
 )
 
 risk_dashboard.to_csv("risk_dashboard.csv", index=False)
-print("✅ Saved: risk_dashboard.csv", risk_dashboard.shape)
+print("Saved: risk_dashboard.csv", risk_dashboard.shape)
 
 
 
@@ -346,7 +346,7 @@ artifact = {
 }
 
 joblib.dump(artifact, "churn_model.joblib")
-print("✅ Saved model artifact: churn_model.joblib")
+print("Saved model artifact: churn_model.joblib")
 
 
 
@@ -407,4 +407,4 @@ print(risk_df[["Churn_Probability", "Predicted_Churn", "Actual_Churn"]].head(10)
 # Export to CSV
 risk_df.to_csv("at_risk_customers.csv", index=False)
 
-print("✅ Exported at_risk_customers.csv successfully.")
+print("Exported at_risk_customers.csv successfully.")
