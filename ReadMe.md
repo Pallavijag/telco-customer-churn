@@ -52,31 +52,10 @@ Key churn drivers identified:
 
 Feature importance and coefficient analysis were performed to interpret model behavior.
 
-## Project Structure
-
-TELCO_CUSTOMER_CHURN/
-│
-├── app.py
-├── train_model.py
-├── test_model.py
-│
-├── models/
-│   └── churn_pipeline.joblib
-│
-├── data/
-│   ├── cleaned_telco_data.csv
-│   ├── at_risk_customers.csv
-│   └── risk_dashboard.csv
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
-
 ## Installation & Setup
 
 ### Clone Repository
 
-git clone https://github.com/yourusername/telco-customer-churn.git  
 cd telco-customer-churn  
 
 ### Create Virtual Environment
